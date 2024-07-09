@@ -5,17 +5,16 @@
 // Define your variables
 $menu-white: #fff;
 $menu-black: #000;
-$menu-item-bg: #eee;
+$menu-item-bg: $color-primary;
 $menu-dark-grey: #333;
 $menu-overlay: #000000dd;
-$menu-modal-background: #eee;
+$menu-modal-background: $color-primary;
 $menu-modal-header: #fff;
-$menu-link: #333;
-$menu-link-hover: #000;
-$menu-submenu-background: #fafafa;
-$menu-submenu-link: #333;
-$menu-submenu-border: #ffffff59;
-
+$menu-link: #fff;
+$menu-link-hover: #fff;
+$menu-submenu-background: $color-primary;
+$menu-submenu-link: #fff;
+$menu-submenu-border: transparent;
 $menu-spacing-small: 10px;
 $menu-spacing-medium: 15px;
 $spacing-large: 20px;
@@ -54,7 +53,7 @@ html.has-modal-nav-open {
 }
 
 .c-cl-mobile-nav button.c-close-modal-nav, .c-cl-mobile-nav button.c-modal-nav-button {
-    background: $menu-white;
+    background: $color-primary;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -63,9 +62,10 @@ html.has-modal-nav-open {
     margin: 0;
     position: absolute;
     right: $menu-spacing-small;
-    top: $menu-spacing-small;
+    top: 25px;
     vertical-align: middle;
     & svg {
+        fill: $color-gray-light;
         width: 20px;
         height: 20px;
         transition: all $transition-fast;
@@ -118,7 +118,8 @@ html.has-modal-nav-open {
 }
 
 .c-modal-nav-header {
-        background-color: $menu-modal-header;
+        background-color: $color-primary;
+        min-height: 75px;
         color: $menu-white;
         padding: $spacing-large;
         margin: 0;
@@ -150,7 +151,7 @@ html.has-modal-nav-open {
                 text-decoration: none;
                 display: block;
                 padding: $menu-spacing-medium;
-                border-bottom: 1px solid #ddd;
+
                 transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
                 text-transform: uppercase;
 
@@ -162,97 +163,7 @@ html.has-modal-nav-open {
         }
 }
 
-//         .menu-item-has-children > a {
-//                 position: relative;
-//                 padding-right: 35px;
-
-//                 &:after {
-//                         content: '';
-//                         position: absolute;
-//                         right: $menu-spacing-small;
-//                         top: 50%;
-//                         transform: translateY(-50%);
-//                         transform-origin: center;
-
-//                         display: inline-block;
-//                         width: 1em;
-//                         height: 1em;
-//                         --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23000' d='M9.414 12.586L16 19.17l6.586-6.585L24 14l-8 8l-8-8z'/%3E%3Cpath fill='%23000' d='M30 16c0 7.72-6.28 14-14 14S2 23.72 2 16S8.28 2 16 2s14 6.28 14 14M4 16c0 6.617 5.383 12 12 12s12-5.383 12-12S22.617 4 16 4S4 9.383 4 16'/%3E%3C/svg%3E");
-//                         background-color: currentColor;
-//                         -webkit-mask-image: var(--svg);
-//                         mask-image: var(--svg);
-//                         -webkit-mask-repeat: no-repeat;
-//                         mask-repeat: no-repeat;
-//                         -webkit-mask-size: 100% 100%;
-//                         mask-size: 100% 100%;
-//                 }
-//         }
-
-//         .menu-item-has-children.is-open > a {
-//                 &:after {
-//                         transform: translateY(-50%) rotate(180deg);
-//                 }
-//         }
-// }
-
-// .c-mobile-menu .sub-menu {
-//         // display: none;
-//         background: $menu-submenu-background;
-//         transition: height 0.3s ease-in-out;
-//         height: 0;
-//         overflow: hidden;
-// }
-
-// .c-mobile-menu .sub-menu a {
-//         display: block;
-//         padding: $menu-spacing-medium $spacing-large;
-//         color: $menu-submenu-link;
-//         text-decoration: none;
-//         font-size: $font-size-small;
-
-//         border-bottom: 1px solid $menu-submenu-border;
-// }
-
-// .c-mobile-menu .sub-menu li:last-of-type a {
-//         border-bottom: none;
-// }
-
-// .c-mobile-menu .sub-menu h4 {
-//         padding: $menu-spacing-medium;
-//         margin: 0;
-//         color: $menu-white;
-// }
-
-
-// SLIDING PANEL VERSION //
-.c-mobile-menu .sub-menu {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #f5f5f5;
-        color: #333;
-        overflow-y: auto;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-        z-index: 1000;
-}
-
-.c-mobile-menu .sub-menu.open {
-        transform: translateX(0);
-}
-
-.c-mobile-menu .sub-menu a {
-        display: block;
-        padding: 15px;
-        color: #333;
-        text-decoration: none;
-        border-bottom: 1px solid #ddd;
-}
-
-
-.c-mobile-menu .menu-item-has-children > a {
+        .menu-item-has-children > a {
                 position: relative;
                 padding-right: 35px;
 
@@ -263,37 +174,137 @@ html.has-modal-nav-open {
                         top: 50%;
                         transform: translateY(-50%);
                         transform-origin: center;
+
                         display: inline-block;
                         width: 1em;
-                        height: 1em;    
-                --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'%3E%3Cpath fill='%23000' d='M29.149 48.356c.609 0 1.124-.235 1.523-.633l18.586-18.141c.445-.445.68-.984.68-1.57c0-.61-.258-1.196-.703-1.57L30.672 8.276a2.105 2.105 0 0 0-1.524-.632c-1.218 0-2.132.937-2.132 2.156c0 .562.234 1.125.61 1.523l17.062 16.688l-17.063 16.687c-.375.399-.61.938-.61 1.524c0 1.218.915 2.133 2.133 2.133m-20.93 0c.586 0 1.125-.235 1.523-.633l18.563-18.141c.445-.445.68-.984.68-1.57c0-.61-.235-1.196-.68-1.57L9.742 8.276c-.422-.398-.937-.632-1.523-.632A2.122 2.122 0 0 0 6.063 9.8c0 .562.257 1.125.632 1.523l17.04 16.688l-17.04 16.687c-.375.399-.632.938-.632 1.524c0 1.218.937 2.133 2.156 2.133'/%3E%3C/svg%3E");
-                background-color: currentColor;
-                -webkit-mask-image: var(--svg);
-                mask-image: var(--svg);
-                -webkit-mask-repeat: no-repeat;
-                mask-repeat: no-repeat;
-                -webkit-mask-size: 100% 100%;
-                mask-size: 100% 100%;
-                              
+                        height: 1em;
+                        --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23000' d='M9.414 12.586L16 19.17l6.586-6.585L24 14l-8 8l-8-8z'/%3E%3Cpath fill='%23000' d='M30 16c0 7.72-6.28 14-14 14S2 23.72 2 16S8.28 2 16 2s14 6.28 14 14M4 16c0 6.617 5.383 12 12 12s12-5.383 12-12S22.617 4 16 4S4 9.383 4 16'/%3E%3C/svg%3E");
+                        background-color: currentColor;
+                        -webkit-mask-image: var(--svg);
+                        mask-image: var(--svg);
+                        -webkit-mask-repeat: no-repeat;
+                        mask-repeat: no-repeat;
+                        -webkit-mask-size: 100% 100%;
+                        mask-size: 100% 100%;
                 }
         }
 
-.c-mobile-menu .sub-menu h4 {
-        padding: 15px;
-        margin: 0;
-        color: #333;
-        background: #eee;
+        .menu-item-has-children.is-open > a {
+                &:after {
+                        transform: translateY(-50%) rotate(180deg);
+                }
+        }
+
+
+.c-mobile-menu .sub-menu {
+        // display: none;
+        background: $menu-submenu-background;
+        transition: height 0.3s ease-in-out;
+        height: 0;
+        overflow: hidden;
 }
 
-/* Style for the back button */
-.c-mobile-menu .sub-menu button {
+.c-mobile-menu .sub-menu a {
         display: block;
-        padding: 15px;
-        color: #333;
-        background: #ddd;
-        border: none;
-        text-align: left;
-        width: 100%;
-        cursor: pointer;
+        padding: $menu-spacing-medium $spacing-large;
+        color: $menu-submenu-link;
+        text-decoration: none;
+        font-size: $font-size-small;
+
+        border-bottom: 1px solid $menu-submenu-border;
 }
+
+.c-mobile-menu .sub-menu li:last-of-type a {
+        border-bottom: none;
+}
+
+.c-mobile-menu .sub-menu h4 {
+        padding: $menu-spacing-medium;
+        margin: 0;
+        color: $menu-white;
+}
+
+
 // SLIDING PANEL VERSION //
+// .c-mobile-menu .sub-menu {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//         height: 100%;
+//         background: #f5f5f5;
+//         color: #333;
+//         overflow-y: auto;
+//         transform: translateX(100%);
+//         transition: transform 0.3s ease-in-out;
+//         z-index: 1000;
+// }
+
+// .c-mobile-menu .sub-menu.open {
+//         transform: translateX(0);
+// }
+
+// .c-mobile-menu .sub-menu a {
+//         display: block;
+//         padding: 15px;
+//         color: #333;
+//         text-decoration: none;
+//         border-bottom: 1px solid #ddd;
+// }
+
+
+// .c-mobile-menu .menu-item-has-children > a {
+//                 position: relative;
+//                 padding-right: 35px;
+
+//                 &:after {
+//                         content: '';
+//                         position: absolute;
+//                         right: $menu-spacing-small;
+//                         top: 50%;
+//                         transform: translateY(-50%);
+//                         transform-origin: center;
+//                         display: inline-block;
+//                         width: 1em;
+//                         height: 1em;    
+//                 --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'%3E%3Cpath fill='%23000' d='M29.149 48.356c.609 0 1.124-.235 1.523-.633l18.586-18.141c.445-.445.68-.984.68-1.57c0-.61-.258-1.196-.703-1.57L30.672 8.276a2.105 2.105 0 0 0-1.524-.632c-1.218 0-2.132.937-2.132 2.156c0 .562.234 1.125.61 1.523l17.062 16.688l-17.063 16.687c-.375.399-.61.938-.61 1.524c0 1.218.915 2.133 2.133 2.133m-20.93 0c.586 0 1.125-.235 1.523-.633l18.563-18.141c.445-.445.68-.984.68-1.57c0-.61-.235-1.196-.68-1.57L9.742 8.276c-.422-.398-.937-.632-1.523-.632A2.122 2.122 0 0 0 6.063 9.8c0 .562.257 1.125.632 1.523l17.04 16.688l-17.04 16.687c-.375.399-.632.938-.632 1.524c0 1.218.937 2.133 2.156 2.133'/%3E%3C/svg%3E");
+//                 background-color: currentColor;
+//                 -webkit-mask-image: var(--svg);
+//                 mask-image: var(--svg);
+//                 -webkit-mask-repeat: no-repeat;
+//                 mask-repeat: no-repeat;
+//                 -webkit-mask-size: 100% 100%;
+//                 mask-size: 100% 100%;
+                              
+//                 }
+//         }
+
+// .c-mobile-menu .sub-menu h4 {
+//         padding: 15px;
+//         margin: 0;
+//         color: #333;
+//         background: #eee;
+// }
+
+// /* Style for the back button */
+// .c-mobile-menu .sub-menu button {
+//         display: block;
+//         padding: 15px;
+//         color: #333;
+//         background: #ddd;
+//         border: none;
+//         text-align: left;
+//         width: 100%;
+//         cursor: pointer;
+// }
+// SLIDING PANEL VERSION // 
+
+.c-cl-mobile-nav-footer {
+        padding: 60px 20px;
+        p {
+                color: #fff;
+                a {
+                        color: $color-secondary;
+                }
+        }
+}

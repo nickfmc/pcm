@@ -89,47 +89,7 @@ document.getElementById('close-modal-nav').addEventListener('click', function(){
 
 
 
-// SLIDING VERSION ////////////////////
-// Get all the menu items that have a submenu
-var menuItems = document.querySelectorAll('.c-mobile-menu .menu-item-has-children');
-
-// Loop through the menu items
-menuItems.forEach(function(menuItem) {
-  // Get the link inside the menu item
-  var link = menuItem.querySelector('a');
-
-  // Clone the link
-  var clonedLink = link.cloneNode(true);
-
-  // Get the submenu inside the menu item
-  var submenu = menuItem.querySelector('.sub-menu');
-
-  // Insert the cloned link at the top of the submenu
-  submenu.insertBefore(clonedLink, submenu.firstChild);
-
-  // Add a click event listener to the original link
-  link.addEventListener('click', function(event) {
-    // Prevent the link from navigating to the href
-    event.preventDefault();
-
-    // Add the 'open' class to the submenu
-    submenu.classList.add('open');
-  });
-
-  // Add a back button to the submenu
-  var backButton = document.createElement('button');
-  backButton.textContent = 'Back';
-  backButton.addEventListener('click', function() {
-    // Remove the 'open' class from the submenu
-    submenu.classList.remove('open');
-  });
-  submenu.insertBefore(backButton, submenu.firstChild);
-});
-// SLIDING VERSION ////////////////////
-
-
-
-// // ACCORDION VERSION ////////////////////
+// // SLIDING VERSION ////////////////////
 // // Get all the menu items that have a submenu
 // var menuItems = document.querySelectorAll('.c-mobile-menu .menu-item-has-children');
 
@@ -140,9 +100,6 @@ menuItems.forEach(function(menuItem) {
 
 //   // Clone the link
 //   var clonedLink = link.cloneNode(true);
-
-//   // Add 'Overview' to the cloned link text
-//   clonedLink.textContent += ' Overview';
 
 //   // Get the submenu inside the menu item
 //   var submenu = menuItem.querySelector('.sub-menu');
@@ -155,34 +112,84 @@ menuItems.forEach(function(menuItem) {
 //     // Prevent the link from navigating to the href
 //     event.preventDefault();
 
-//     // Close all other menu items
-//     menuItems.forEach(function(otherMenuItem) {
-//       if (otherMenuItem !== menuItem) {
-//         otherMenuItem.classList.remove('is-open');
-//         var otherSubmenu = otherMenuItem.querySelector('.sub-menu');
-//         otherSubmenu.style.height = null;
-//         otherSubmenu.classList.remove('open');
-//       }
-//     });
-
-//     // Toggle the 'open' class on the submenu
-//     submenu.classList.toggle('open');
-
-//     // Toggle the 'is-open' class on the menu item
-//     menuItem.classList.toggle('is-open');
-
-//     // If the submenu is open, set its height to its scrollHeight
-//     if (submenu.classList.contains('open')) {
-//       submenu.style.height = submenu.scrollHeight + 'px';
-//     } else {
-//       submenu.style.height = null;
-//     }
+//     // Add the 'open' class to the submenu
+//     submenu.classList.add('open');
 //   });
+
+//   // Add a back button to the submenu
+//   var backButton = document.createElement('button');
+//   backButton.textContent = 'Back';
+//   backButton.addEventListener('click', function() {
+//     // Remove the 'open' class from the submenu
+//     submenu.classList.remove('open');
+//   });
+//   submenu.insertBefore(backButton, submenu.firstChild);
 // });
-// // ACCORDION VERSION ////////////////////
+// // SLIDING VERSION ////////////////////
 
 
 
+// ACCORDION VERSION ////////////////////
+// Get all the menu items that have a submenu
+document.addEventListener('DOMContentLoaded', function() {
+  var menuItems = document.querySelectorAll('.c-mobile-menu .menu-item-has-children');
+
+  // Loop through the menu items
+  menuItems.forEach(function(menuItem, index) {
+    // Skip adding "Overview" link for the second .menu-item-has-children
+    if (index !== 1) {
+      if (menuItem.id !== 'menu-item-30') {
+        // Get the link inside the menu item
+        var link = menuItem.querySelector('a');
+
+        // Clone the link
+        var clonedLink = link.cloneNode(true);
+
+        // Add 'Overview' to the cloned link text
+        clonedLink.textContent += ' Overview';
+
+        // Get the submenu inside the menu item
+        var submenu = menuItem.querySelector('.sub-menu');
+
+        // Insert the cloned link at the top of the submenu
+        submenu.insertBefore(clonedLink, submenu.firstChild);
+      }
+    }
+
+    // Ensure the accordion functionality is applied to all menu items, including the second one
+    var link = menuItem.querySelector('a'); // Moved inside the forEach to ensure it's defined for all menu items
+    var submenu = menuItem.querySelector('.sub-menu'); // Moved inside the forEach for the same reason
+
+    // Add a click event listener to the original link
+    link.addEventListener('click', function(event) {
+      // Prevent the link from navigating to the href
+      event.preventDefault();
+
+      // Close all other menu items
+      menuItems.forEach(function(otherMenuItem) {
+        if (otherMenuItem !== menuItem) {
+          otherMenuItem.classList.remove('is-open');
+          var otherSubmenu = otherMenuItem.querySelector('.sub-menu');
+          otherSubmenu.style.height = null;
+          otherSubmenu.classList.remove('open');
+        }
+      });
+
+      // Toggle the 'open' class on the submenu
+      submenu.classList.toggle('open');
+
+      // Toggle the 'is-open' class on the menu item
+      menuItem.classList.toggle('is-open');
+
+      // If the submenu is open, set its height to its scrollHeight
+      if (submenu.classList.contains('open')) {
+        submenu.style.height = submenu.scrollHeight + 'px';
+      } else {
+        submenu.style.height = null; 
+      }
+    }); 
+  });
+});
 
 
 

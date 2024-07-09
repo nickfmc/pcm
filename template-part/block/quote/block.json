@@ -1,0 +1,16 @@
+{
+    "name": "acf/quote-block",
+    "title": "Quote Block",
+    "description": "Custom Quote Block",
+    "icon": "admin-comments",
+    "keywords": ["quote", "quote block", "originblocks"],
+    "category": "myblocks",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "quote.php"
+    },
+    "example": {
+        "attributes": {}
+    },
+    "align": "full"
+}

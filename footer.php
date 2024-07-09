@@ -2,13 +2,14 @@
 
     <div class="c-page-footer-upper">
       <div class="o-wrapper-wide">
+        
       <div class="grid-x">
-          <div class="cell  medium-3">
+          <div class="cell  medium-5">
             <?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
               <?php dynamic_sidebar( 'footer-1' ); ?>
             <?php endif; ?>
           </div>
-          <div class="cell  medium-3">
+          <div class="cell  medium-4">
           <?php if ( is_active_sidebar( 'footer-2' ) ) : ?>
             <?php dynamic_sidebar( 'footer-2' ); ?>
           <?php endif; ?>
@@ -18,11 +19,7 @@
             <?php dynamic_sidebar( 'footer-3' ); ?>
           <?php endif; ?>
           </div>
-          <div class="cell  medium-3">
-          <?php if ( is_active_sidebar( 'footer-4' ) ) : ?>
-            <?php dynamic_sidebar( 'footer-4' ); ?>
-          <?php endif; ?>
-          </div>
+    
         </div>
         <!-- /.c-footer-widgets -->
         

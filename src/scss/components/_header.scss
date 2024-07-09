@@ -1,13 +1,17 @@
+
 /* ==========================================================================
    HEADER
    ========================================================================== */
 
 .c-page-header {
-  background: #fff;
+  background: $color-gray-light;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   height: 100px;  
   padding-left: 25px;
   padding-right: 25px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
   // enable styles below for usage with headroom.js
   // position: fixed;
   // top: 0;

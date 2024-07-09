@@ -36,22 +36,78 @@
     line-height: 1;
     position: relative;
     white-space: nowrap;
+    &.c-menu-btn  {
+      margin-left: 24px;
+      position: relative;
+      a {
+        position: relative;
+        transition: $transition-ease;
+        top: 27px;
+        border-radius: 0;
+        font-weight: 400;
+        border-radius: 5px;
+        padding: 13px 20px;
+
+        background-color: $color-primary;
+  
+        color: $color-gray-light;
+        &:hover,&:active {
+          transition: $transition-ease;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 2px 6px rgba(0, 0, 0, 0.3);
+          color: $color-gray-light;
+          background-color: $color-secondary;
+          background-image: none;
+
+        }
+        &::after {
+          display: none;
+        
+        }
+      }
+    
+    }
   }
   .c-main-menu > li > a {
-    color: #555555;
+    color: $color-primary;
+    font-weight: 400;
+    text-transform: uppercase;
     display: block;
-    font-size: 1rem;
+    font-size: 16px;
     margin: 0;
-    padding: 41px 1rem;
+    padding: 42px 1rem;
+    position: relative;
     &:first-of-type > a {
       padding-left: 0;
     }
     &:last-of-type > a {
       padding-right: 0;
     }
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: calc(100% - 32px);
+      height: 2px;
+      background-color: $color-gray-light;
+      border-radius: 20px;
+      top: 30px;
+      transition: $transition-ease;
+    }
+    
   }
   .c-main-menu > li > a:hover {
-    color: #222222;
+    color: #000;
+    &::after {
+      background-color: $color-primary;
+      transition: $transition-ease;
+    }
+  }
+  .c-main-menu > li:hover a{
+   
+    &::after {
+      background-color: $color-primary;
+      transition: $transition-ease;
+    }
   }
   .c-main-menu > .current-menu-item > a,
   .c-main-menu > .current-page-ancestor > a,
@@ -74,10 +130,11 @@
     visibility: visible;
   }
   .c-main-menu ul {
-    background-color: #aaa;
+    background-color: $color-gray-light;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     position: absolute;
-    right: 0;
-    top: 30px;
+    left: 0;
+    top: 100%;
     min-width: 180px;
     margin: 0;
     padding: 0;
@@ -97,9 +154,9 @@
     max-height: 140px;
   }
   .c-main-menu ul li a {
-    color: #ffffff;
+    color: $color-primary;
     font-size: 0.938rem;
-    padding: 0.5rem 1rem;
+    padding: 12px 15px;
     width: 100%;
     display: block;
     transition: $transition-ease;
@@ -110,7 +167,9 @@
   .c-main-menu ul .current_page_item > a,
   .c-main-menu ul .current_page_parent > a,
   .c-main-menu ul .current_page_ancestor > a {
-    color: #000000;
+    color: $color-gray-light;
+    background-color: #182127;
+
   }
 }
 // END drop down styling

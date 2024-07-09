@@ -21,25 +21,26 @@
 					"name": "White"
 				},
                 {
-					"slug": "dark-grey",
-					"color": "#121212",
-					"name": "Dark grey"
+					"slug": "light-grey",
+					"color": "#F3F7F0",
+					"name": "Light grey"
 				},
 				{
 					"slug": "medium-grey",
-					"color": "#383838",
+					"color": "#a0acad",
 					"name": "Medium grey"
 				},
 				{
 					"slug": "primary",
-					"color": "#00838f",
+					"color": "#222f38",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#4fb3bf",
+					"color": "#eca400",
 					"name": "Secondary" 
 				},
+				
 				{
 					"slug": "transparent",
 					"color": "transparent",

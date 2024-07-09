@@ -3143,7 +3143,7 @@ html {
 
 body {
   color: #000;
-  font-family: "rubik", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.5;
   -webkit-overflow-scrolling: touch;
 }
@@ -3153,10 +3153,10 @@ body {
    ========================================================================== */
 blockquote {
   position: relative;
-  padding: 1em 1.5em;
+  padding: 25px;
   margin: 30px 0;
-  font-size: clamp(1.13rem, 0.6vw + 0.98rem, 1.5rem);
-  color: #323232;
+  font-size: clamp(1.13rem, 0.2vw + 1.08rem, 1.25rem);
+  color: #222f38;
 }
 blockquote::before {
   content: "“";
@@ -3164,7 +3164,7 @@ blockquote::before {
   top: 0;
   left: 10px;
   z-index: -1;
-  color: #EAEAEA;
+  color: #F3F7F0;
   font-size: 190px;
   line-height: 1;
 }
@@ -3176,7 +3176,7 @@ blockquote cite {
   margin-top: 1em;
   font-size: 18px;
   text-align: left;
-  font-style: italic;
+  font-weight: 700;
 }
 blockquote cite::before {
   content: "— ";
@@ -3195,9 +3195,9 @@ blockquote::before {
    HEADINGS
    ========================================================================== */
 h1, .h1-style, h2, .h2-style, h3, .h3-style, h4, .h4-style, h5, .h5-style, h6, .h6-style {
-  color: #323232;
-  font-family: "rubik", serif;
-  font-weight: 400;
+  color: #222f38;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
   line-height: 1.1;
   margin: 0 0 1rem 0;
 }
@@ -3207,7 +3207,8 @@ h1 a, .h1-style a, h2 a, .h2-style a, h3 a, .h3-style a, h4 a, .h4-style a, h5 a
 }
 
 h1, .h1-style {
-  font-size: clamp(2.81rem, 1.5vw + 2.44rem, 3.75rem);
+  font-size: clamp(2.19rem, 2.5vw + 1.56rem, 3.75rem);
+  font-weight: 700;
 }
 
 h2, .h2-style {
@@ -3337,7 +3338,7 @@ form input::placeholder {
    A TAG (links) STYLES
    ========================================================================== */
 a {
-  color: #460f5f;
+  color: #eca400;
   text-decoration: none;
   cursor: pointer;
   -webkit-transition: all 250ms ease;
@@ -3375,7 +3376,7 @@ p {
 }
 
 .c-blk-btn a, .c-btn-primary a, .wp-block-button.is-style-standard a.wp-block-button__link, .wp-block-button.is-style-standard .wp-block-button__link {
-  background-color: #ACACAC;
+  background-color: #a0acad;
   border: none;
   color: #FFF;
   display: inline-block;
@@ -3388,7 +3389,7 @@ p {
   white-space: nowrap;
 }
 .c-blk-btn a:hover, .c-btn-primary a:hover, .wp-block-button.is-style-standard a.wp-block-button__link:hover, .wp-block-button.is-style-standard .wp-block-button__link:hover {
-  background-color: #EAEAEA;
+  background-color: #F3F7F0;
   color: #000;
 }
 
@@ -3396,7 +3397,7 @@ p {
    COLOURS
    ========================================================================== */
 .u-bg-grey {
-  background-color: #ACACAC;
+  background-color: #a0acad;
 }
 
 /* ==========================================================================
@@ -6295,7 +6296,7 @@ p {
 }
 
 .is-style-secondaryfont {
-  font-family: "rubik", serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .wp-block[data-align=full] .wp-block-group .wp-block {

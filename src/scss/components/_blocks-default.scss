@@ -152,6 +152,13 @@ $paddingHorizontal: 25px;
   margin-left: 30px;
   } 
 }
+
+.editor-content ul.u-flex-list {
+  display: flex;
+  gap: 25px;
+  flex-flow: row wrap;
+}
+
 .editor-content ul li {
   margin: 0;
   padding: 0 0 10px 12px;
@@ -160,12 +167,11 @@ $paddingHorizontal: 25px;
 }
 .editor-content ul li::before {
   display: block; 
-  background-color: #333;
+  background-color: $color-secondary;
   content: "";
 	position: absolute;
   width: 6px;
-  height: 6px;
-  border-radius: 50%;
+  height: 2px;
   top: 0.58em;
   left: 0;
 }

@@ -4,9 +4,9 @@
 
    blockquote {
     position: relative;
-    padding: 1em 1.5em;
+    padding: 25px;
     margin: 30px 0;
-    font-size: clamped(18px, 24px);
+    font-size: clamped(18px, 20px);
     color: $heading-color;
     
   
@@ -31,7 +31,7 @@
       margin-top: 1em;
       font-size: 18px;
       text-align: left;
-      font-style: italic;
+     font-weight: 700;
       &::before {
         content: "\2014 \2009";
       }

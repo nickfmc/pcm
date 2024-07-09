@@ -13,7 +13,9 @@
   <?php // other html head stuff (before WP/theme scripts are loaded) ------- ?>
 
   <?php wp_head(); // wordpress head functions -- DONOTREMOVE ?>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <?php // START Google Analytics here ?>
   <?php // END Analytics ?>
 </head>
@@ -47,15 +49,18 @@
             </button>
             <nav class="c-modal-nav" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
             <div class="c-modal-nav-header">
-              <div class="c-modal-nav-logo">
-                <a href="/" rel="nofollow">
-                  <img src="<?php bloginfo('template_url') ?>/img/logo.svg" alt="<?php bloginfo('name'); ?>" />
-                </a>
-              </div> <!-- /c-main-logo -->
+            
             </div>
               <?php  gdt_nav_menu( 'mobile-menu', 'c-mobile-menu' ); // Adjust using Menus in WordPress Admin ?>
             </nav>
+            <div class="c-cl-mobile-nav-footer"><p>193 Gosling Road Newington,
+NH 03801<br />
+Phone: <a href="tel:603-373-6812">603-373-6812</a><br />
+Fax: 603-373-6832<br />
+Email: <a href="mailto:info@pepperrellcovemarine.com">info@pepperrellcovemarine.com</a></p></div>
           </div> <!-- /modal-nav-wrap -->
+
+
       </div>
     </div>
     <!-- /o-wrapper-wide-->

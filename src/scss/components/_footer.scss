@@ -4,24 +4,66 @@
 
 .c-page-footer {
   padding-top: 100px;
+  background-color: $color-primary;
+  h4,p {
+    color: #fff;
+  }
+  h4 {
+    font-size: clamped(20px, 22px);
+    margin-bottom: 24px;
+  }
+  a:hover {
+    color: #fff;
+  }
+  .cell {
+    margin-bottom: 30px;
+  }
+@media(width >= $bp-medium) {
+  .cell {
+    margin-bottom: 0;
+  }
+  .medium-5 {
+    padding-right: 20px;
+  }
+  .medium-4 { 
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .medium-3 {
+    padding-left: 20px;
+  }
+} 
+  
 
+  .menu {
+    li {
+      a {
+        font-weight: 700;
+      }
+    }
+  }
 }
 
 .c-page-footer-upper {
-  background-color: $color-gray-light;
+
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 100px;
 }
 
 .c-page-footer-lower {
-  background-color: #333;
-  color: #fff;
+  background-color: #182127;
+  color: $color-gray-light;
   padding-left: 25px;
   padding-right: 25px;
   font-size: 15px;
   > div {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
   }
+}
+
+.c-copywrite {
+  font-weight: 500;
+  font-size: 13px;
 }
