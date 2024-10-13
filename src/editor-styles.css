@@ -3139,6 +3139,7 @@
    ========================================================================== */
 html {
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -3146,6 +3147,7 @@ body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
   -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
 }
 
 /* ==========================================================================
@@ -3236,13 +3238,12 @@ h6, .h6-style {
    ========================================================================== */
 hr, hr.wp-block-separator {
   display: block;
-  margin: 1rem auto;
   padding: 0;
   clear: both;
   width: 100%;
   border-top: 0;
-  border-color: #333;
-  margin: 50px auto;
+  border-color: #ccc;
+  margin: 30px auto;
 }
 
 /* ==========================================================================
