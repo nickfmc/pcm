@@ -17,6 +17,8 @@
   align-items: center;
   gap: var(--spacing-4xl, 32px);
   align-self: stretch;
+  flex-flow: row wrap;
+  
   > div {
     display: flex;
   padding-right: var(--spacing-4xl, 32px);
@@ -25,5 +27,6 @@
   gap: var(--spacing-6xl, 48px);
   flex: 1 0 0;
   }
+ 
   }
   

@@ -5775,6 +5775,10 @@ html.has-modal-nav-open {
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 .c-404-layout > div {
   display: -webkit-box;
